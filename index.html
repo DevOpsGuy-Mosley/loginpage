@@ -11,7 +11,7 @@
     <div class="login-container">
         <div class="left-panel">
             <div class="image-panel">
-                <img src="Developer programmer -Программист-разработчик.jpeg" alt="Background" class="panel-image">
+                <img id="randomImage" src="Developer programmer -Программист-разработчик.jpeg" alt="Background" class="panel-image">
             </div>
         </div>
         <div class="right-panel">
@@ -42,5 +42,24 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const images = [
+            'Developer programmer -Программист-разработчик.jpeg',
+            '_dc9e527d-63f2-43b3-b029-977248e5a32c.jpeg',
+            'BNFA6345.JPG',
+            '25b0ee34-2595-4750-a248-748e1cfe210e.png',
+            '_.jpeg',
+        ];
+
+        function changeImage() {
+            const img = document.getElementById('randomImage');
+            const randomIndex = Math.floor(Math.random() * images.length);
+            img.src = images[randomIndex];
+        }
+
+        // Changer l'image au chargement de la page
+        window.onload = changeImage;
+    </script>
 </body>
 </html>
